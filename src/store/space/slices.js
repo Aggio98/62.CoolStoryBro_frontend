@@ -4,12 +4,16 @@ const initialState = {
   spaces: null,
   spaceDetails: null,
 };
-
+//F1 step4: write a slice that will update the store (allSpaces)
 export const spaceSlice = createSlice({
   name: "spaces",
   initialState,
-  reducers: {},
+  reducers: {
+    allSpaces: (state, action) => {
+      state.spaces = action.payload;
+    },
+  },
 });
 
-export const {} = spaceSlice.actions;
+export const { allSpaces } = spaceSlice.actions;
 export default spaceSlice.reducer;
