@@ -24,8 +24,9 @@ export const fetchStories = (id) => async (dispatch, getState) => {
   try {
     dispatch(appLoading());
     const response = await axios.get(`${apiUrl}/spaces/${id}`);
-    console.log("this is the details for the spaces", response.data);
+    //console.log("this is the details for the spaces", response.data);
     dispatch(detailsSpace(response.data));
+    dispatch(appDoneLoading());
   } catch (e) {
     console.log("error fetching details", e.message);
   }

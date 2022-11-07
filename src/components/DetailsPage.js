@@ -7,7 +7,7 @@ import { selectDetails } from "../store/space/selectors";
 const DetailsPage = () => {
   const params = useParams();
   const details = useSelector(selectDetails);
-
+  //F2 use params and fetcht the data that it shows on the console
   const dispatch = useDispatch();
 
   useEffect(() => {
